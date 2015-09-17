@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+  username: postgres
+  password: postgres
+
+development:
+  <<: *defaults
+  database: dead_dev
+
+test:
+  <<: *defaults
+  database: dead_test
